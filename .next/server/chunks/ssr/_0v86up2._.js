@@ -1,0 +1,3 @@
+module.exports=[41675,a=>{"use strict";let b=(0,a.i(70106).default)("calendar",[["path",{d:"M8 2v4",key:"1cmpym"}],["path",{d:"M16 2v4",key:"4m81vk"}],["rect",{width:"18",height:"18",x:"3",y:"4",rx:"2",key:"1hopcy"}],["path",{d:"M3 10h18",key:"8toen8"}]]);a.s(["Calendar",0,b],41675)},67304,a=>{"use strict";var b=a.i(87924);a.i(72131);var c=a.i(79076);a.s(["default",0,function(){return(0,b.jsx)(c.default,{})}])}];
+
+//# sourceMappingURL=_0v86up2._.js.map

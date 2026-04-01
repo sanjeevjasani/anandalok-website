@@ -1,0 +1,13 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/admission/page": "app/admission/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/donate/page": "app/donate/page.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/get-involved/page": "app/get-involved/page.js",
+  "/page": "app/page.js",
+  "/stories/[slug]/page": "app/stories/[slug]/page.js",
+  "/stories/page": "app/stories/page.js"
+}

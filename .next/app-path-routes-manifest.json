@@ -1,0 +1,13 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/admission/page": "/admission",
+  "/contact/page": "/contact",
+  "/donate/page": "/donate",
+  "/gallery/page": "/gallery",
+  "/get-involved/page": "/get-involved",
+  "/page": "/",
+  "/stories/[slug]/page": "/stories/[slug]",
+  "/stories/page": "/stories"
+}
