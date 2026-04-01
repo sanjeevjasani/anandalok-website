@@ -3,6 +3,7 @@
 import React from 'react';
 import { Heart, MapPin, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -12,7 +13,7 @@ export default function Footer() {
         {/* Column 1: Brand */}
         <div className="flex flex-col gap-6">
           <Link href="/" className="block">
-            <img src="/anandalok-logo.png" alt="Anandalok Logo" className="h-16 w-auto brightness-0 invert" />
+            <Image src="/anandalok-logo.png" alt="Anandalok Logo" width={200} height={64} className="h-16 w-auto brightness-0 invert" />
           </Link>
           <p className="text-cream/60 max-w-sm leading-relaxed text-lg">
             A residential care sanctuary for individuals with autism and intellectual disabilities. Empowering lives and nurturing potential since 1989.

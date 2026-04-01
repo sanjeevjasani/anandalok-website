@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useLayoutEffect, useRef } from 'react';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -57,11 +58,13 @@ export default function Truth() {
           </div>
         </div>
 
-        <div className="flex-1 w-full aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl truth-animate">
-          <img 
-            src="/community_meals_official.jpg" 
-            alt="Anandalok residents enjoying a community meal" 
-            className="w-full h-full object-cover"
+        <div className="relative flex-1 w-full aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl truth-animate">
+          <Image
+            src="/community_meals_official.jpg"
+            alt="Anandalok residents enjoying a community meal"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
 

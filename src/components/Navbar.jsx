@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
@@ -46,10 +47,12 @@ export default function Navbar() {
     >
       <div className="flex items-center justify-between px-6 py-3">
         <Link href="/" className="cursor-pointer z-50 flex items-center">
-          <img 
-            src="/anandalok-logo.png" 
-            alt="Anandalok Logo" 
-            className={`h-10 w-auto transition-all duration-500 ${!scrolled && !isOpen ? 'brightness-0 invert' : ''}`} 
+          <Image
+            src="/anandalok-logo.png"
+            alt="Anandalok Logo"
+            width={160}
+            height={40}
+            className={`h-10 w-auto transition-all duration-500 ${!scrolled && !isOpen ? 'brightness-0 invert' : ''}`}
           />
         </Link>
         

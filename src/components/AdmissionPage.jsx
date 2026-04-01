@@ -3,6 +3,7 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import { FileDown, Phone, Mail, CheckCircle2, ChevronDown, Home, Sun, Info, ArrowRight, Users, MapPin, Shield, Calendar } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -73,7 +74,7 @@ export default function AdmissionPage() {
       {/* SECTION 1: PAGE HERO */}
       <section className="relative min-h-screen flex items-center justify-center text-center px-6 pt-40 pb-20 bg-dark overflow-hidden">
         <div className="absolute inset-0 z-0">
-           <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=2670&auto=format&fit=crop" alt="Sanctuary Home" className="w-full h-full object-cover opacity-30 grayscale" />
+           <Image src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=2670&auto=format&fit=crop" alt="Sanctuary Home" fill className="object-cover opacity-30 grayscale" sizes="100vw" priority />
            <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
         </div>
         <div className="relative z-10 max-w-4xl space-y-12">

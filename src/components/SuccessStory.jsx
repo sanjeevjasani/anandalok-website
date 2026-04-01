@@ -2,6 +2,7 @@
 
 import React, { useLayoutEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -31,11 +32,13 @@ export default function SuccessStory() {
     <section id="success" ref={container} className="py-24 px-6 md:px-16 bg-backgroundSecondary">
       <div className="container mx-auto flex flex-col lg:flex-row items-start gap-16 max-w-6xl">
         
-        <div className="flex-1 w-full aspect-square rounded-[3rem] overflow-hidden shadow-2xl success-animate mt-10">
-          <img 
-            src="/rushadru_official.jpg" 
-            alt="Rushadru's success story" 
-            className="w-full h-full object-cover"
+        <div className="relative flex-1 w-full aspect-square rounded-[3rem] overflow-hidden shadow-2xl success-animate mt-10">
+          <Image
+            src="/rushadru_official.jpg"
+            alt="Rushadru's success story"
+            fill
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </div>
 

@@ -3,6 +3,7 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import { Heart, Building2, Megaphone, MapPin, ArrowRight, Mail, Phone, Calendar, Hammer, Gift, CheckCircle2, Share2, Globe, MessageCircle, Users } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -61,10 +62,13 @@ export default function GetInvolvedPage() {
       {/* SECTION 1: PAGE HERO */}
       <section className="relative min-h-screen flex items-center justify-center text-center px-6 pt-40 pb-20 bg-dark overflow-hidden">
         <div className="absolute inset-0 z-0">
-           <img 
-             src="/campus7.jpg" 
-             alt="Community Sanctuary" 
-             className="w-full h-full object-cover opacity-30 grayscale" 
+           <Image
+             src="/campus7.jpg"
+             alt="Community Sanctuary"
+             fill
+             className="object-cover opacity-30 grayscale"
+             sizes="100vw"
+             priority
            />
            <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
         </div>
@@ -140,8 +144,8 @@ export default function GetInvolvedPage() {
               </div>
            </div>
            <div className="lg:col-span-5 scroll-animate">
-              <div className="aspect-[3/4] rounded-[3rem] overflow-hidden shadow-2xl">
-                 <img src="/campus8.jpg" alt="Interaction" className="w-full h-full object-cover" />
+              <div className="relative aspect-[3/4] rounded-[3rem] overflow-hidden shadow-2xl">
+                 <Image src="/campus8.jpg" alt="Interaction" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 40vw" />
               </div>
            </div>
         </div>
@@ -184,8 +188,8 @@ export default function GetInvolvedPage() {
                   <a href="mailto:anandalok90@gmail.com?subject=Corporate Partnership Enquiry — Anandalok" className="px-8 py-4 bg-accent text-cream font-heading font-bold rounded-2xl btn-magnetic inline-block">Email Our Partnership Team</a>
                 </div>
               </div>
-              <div className="aspect-video rounded-[3rem] overflow-hidden shadow-xl border border-border">
-                 <img src="/campus9.jpg" alt="Corporate Partnership" className="w-full h-full object-cover" />
+              <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-xl border border-border">
+                 <Image src="/campus9.jpg" alt="Corporate Partnership" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
               </div>
            </div>
         </div>
@@ -260,8 +264,8 @@ export default function GetInvolvedPage() {
                  </div>
               </div>
               <div className="scroll-animate relative">
-                 <div className="aspect-square rounded-[4rem] overflow-hidden shadow-2xl">
-                    <img src="/campus3.jpg" alt="Campus environment" className="w-full h-full object-cover" />
+                 <div className="relative aspect-square rounded-[4rem] overflow-hidden shadow-2xl">
+                    <Image src="/campus3.jpg" alt="Campus environment" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
                  </div>
                  <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-accent rounded-full p-8 hidden xl:flex items-center text-center text-cream font-heading font-bold text-lg leading-tight uppercase tracking-widest">
                    10km From Airport

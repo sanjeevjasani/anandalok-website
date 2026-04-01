@@ -3,6 +3,7 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import { Phone, Mail, MapPin, Heart, Gift, Users, Building, Mic, Send, ChevronDown, CheckCircle2, ArrowRight, Shield } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -82,10 +83,13 @@ export default function ContactPage() {
       {/* SECTION 1: PAGE HERO */}
       <section className="relative min-h-screen flex items-center justify-center text-center px-6 pt-40 pb-20 bg-dark overflow-hidden">
         <div className="absolute inset-0 z-0">
-           <img 
-             src="/campus1.jpg" 
-             alt="Contact Sanctuary" 
-             className="w-full h-full object-cover opacity-30 grayscale" 
+           <Image
+             src="/campus1.jpg"
+             alt="Contact Sanctuary"
+             fill
+             className="object-cover opacity-30 grayscale"
+             sizes="100vw"
+             priority
            />
            <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
         </div>

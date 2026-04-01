@@ -3,6 +3,7 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import { Home, Sun, Heart, Paintbrush, Sprout, Users, Building2, Shield, Globe, FileText, Eye, CheckCircle2, Quote } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -58,10 +59,13 @@ export default function AboutPage() {
       {/* SECTION 1: PAGE HERO */}
       <section className="relative min-h-screen flex items-center justify-center text-center px-6 pt-40 pb-20 bg-dark overflow-hidden">
         <div className="absolute inset-0 z-0">
-           <img 
-             src="https://images.unsplash.com/photo-1505483531331-fc3cf89fd382?q=80&w=2670&auto=format&fit=crop" 
-             alt="Two Families, One Question" 
-             className="w-full h-full object-cover opacity-40 grayscale" 
+           <Image
+             src="https://images.unsplash.com/photo-1505483531331-fc3cf89fd382?q=80&w=2670&auto=format&fit=crop"
+             alt="Two Families, One Question"
+             fill
+             className="object-cover opacity-40 grayscale"
+             sizes="100vw"
+             priority
            />
            <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
         </div>
@@ -103,8 +107,8 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="scroll-animate w-full aspect-video rounded-3xl overflow-hidden shadow-lg border border-accent/10">
-            <img src="/about-us-group.jpg" alt="Founder Story" className="w-full h-full object-cover" />
+          <div className="relative scroll-animate w-full aspect-video rounded-3xl overflow-hidden shadow-lg border border-accent/10">
+            <Image src="/about-us-group.jpg" alt="Founder Story" fill className="object-cover" sizes="(max-width: 720px) 100vw, 720px" />
           </div>
 
           <div className="scroll-animate space-y-8 font-body text-dark/80 text-lg leading-relaxed">
@@ -128,8 +132,8 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="scroll-animate w-full aspect-video rounded-3xl overflow-hidden shadow-lg border border-accent/10">
-            <img src="/about-us-img.jpg" alt="Expansion phase" className="w-full h-full object-cover" />
+          <div className="relative scroll-animate w-full aspect-video rounded-3xl overflow-hidden shadow-lg border border-accent/10">
+            <Image src="/about-us-img.jpg" alt="Expansion phase" fill className="object-cover" sizes="(max-width: 720px) 100vw, 720px" />
           </div>
 
           <div className="scroll-animate space-y-8 font-body text-dark/80 text-lg leading-relaxed">
@@ -174,10 +178,10 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="scroll-animate grid grid-cols-2 gap-6">
-             <div className="aspect-square rounded-3xl overflow-hidden shadow-lg border border-border"><img src="/gallery1.jpeg" alt="Resident Art" className="w-full h-full object-cover" /></div>
-             <div className="aspect-square rounded-3xl overflow-hidden shadow-lg border border-border"><img src="/gallery2.jpeg" alt="Resident Skill" className="w-full h-full object-cover" /></div>
-             <div className="aspect-square rounded-3xl overflow-hidden shadow-lg border border-border"><img src="/gallery3.jpeg" alt="Creativity" className="w-full h-full object-cover" /></div>
-             <div className="aspect-square rounded-3xl overflow-hidden shadow-lg border border-border"><img src="/gallery4.jpeg" alt="Campus Life" className="w-full h-full object-cover" /></div>
+             <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-border"><Image src="/gallery1.jpeg" alt="Resident Art" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" /></div>
+             <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-border"><Image src="/gallery2.jpeg" alt="Resident Skill" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" /></div>
+             <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-border"><Image src="/gallery3.jpeg" alt="Creativity" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" /></div>
+             <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-border"><Image src="/gallery4.jpeg" alt="Campus Life" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" /></div>
           </div>
         </div>
       </section>

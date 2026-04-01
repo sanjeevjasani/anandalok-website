@@ -1,9 +1,10 @@
 'use client';
 
 import React, { useLayoutEffect, useRef, useState, useMemo } from 'react';
-import { Share2, ArrowRight, Clock, Calendar, ChevronRight, MessageSquare, Link as LinkIcon } from 'lucide-react';
+import { Share2, ArrowRight, Clock, Calendar, Link as LinkIcon } from 'lucide-react';
 import Link from 'next/link'
-import { useParams, useRouter } from 'next/navigation';
+import Image from 'next/image';
+import { useParams } from 'next/navigation';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -132,11 +133,13 @@ const StoryCard = ({ story }) => (
     href={`/stories/${story.slug}`}
     className="scroll-animate group bg-background border border-border rounded-[2.5rem] overflow-hidden hover:border-accent transition-all duration-500 hover:shadow-xl flex flex-col"
   >
-    <div className="aspect-[16/10] overflow-hidden relative">
-       <img 
-         src={story.image.startsWith('http') ? `${story.image}?q=80&w=800&auto=format&fit=crop` : story.image} 
-         alt={story.title} 
-         className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" 
+    <div className="relative aspect-[16/10] overflow-hidden">
+       <Image
+         src={story.image.startsWith('http') ? `${story.image}?q=80&w=800&auto=format&fit=crop` : story.image}
+         alt={story.title}
+         fill
+         className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
        />
        <div className="absolute bottom-4 left-6 px-4 py-2 bg-accent text-cream text-[10px] font-data uppercase tracking-widest rounded-full">
           {story.category}
@@ -167,7 +170,6 @@ export default function StoriesPage() {
   const container = useRef();
   const { slug } = useParams();
   const [activeCategory, setActiveCategory] = useState('All Stories');
-  const router = useRouter();
 
   const categories = ['All Stories', 'Resident Journeys', 'Family Voices', 'Life at Anandalok', 'Understanding Autism'];
 
@@ -218,8 +220,8 @@ export default function StoriesPage() {
       <div ref={container} className="bg-background min-h-screen selection:bg-accent selection:text-white pb-32">
         <article className="container mx-auto max-w-7xl px-6">
            <header className="space-y-12 mb-20 text-center">
-              <div className="aspect-[21/9] rounded-[4rem] overflow-hidden story-hero-content shadow-2xl">
-                 <img src={`${currentStory.image}?q=100&w=2600`} alt={currentStory.title} className="w-full h-full object-cover" />
+              <div className="relative aspect-[21/9] rounded-[4rem] overflow-hidden story-hero-content shadow-2xl">
+                 <Image src={currentStory.image.startsWith('http') ? `${currentStory.image}?q=100&w=2600` : currentStory.image} alt={currentStory.title} fill className="object-cover" sizes="100vw" priority />
               </div>
               <div className="max-w-4xl mx-auto space-y-6 story-hero-content">
                  <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest">{currentStory.category}</span>
@@ -259,8 +261,8 @@ export default function StoriesPage() {
                  
                  {nextStory && (
                    <Link href={`/stories/${nextStory.slug}`} className="group p-8 bg-background-secondary border border-border rounded-[2.5rem] flex items-center gap-8 max-w-md hover:border-accent transition-all duration-500">
-                      <div className="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
-                         <img src={`${nextStory.image}?q=80&w=400&auto=format&fit=crop`} alt="Next Story" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                      <div className="relative w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
+                         <Image src={nextStory.image.startsWith('http') ? `${nextStory.image}?q=80&w=400&auto=format&fit=crop` : nextStory.image} alt="Next Story" fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" sizes="96px" />
                       </div>
                       <div className="space-y-1">
                          <span className="text-[10px] font-data text-accent uppercase tracking-widest">Read Next</span>
@@ -282,10 +284,13 @@ export default function StoriesPage() {
       {/* SECTION 1: PAGE HERO */}
       <section className="relative bg-dark py-32 px-6 md:px-16 text-center overflow-hidden min-h-[60dvh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="/truth.jpg" 
-            alt="Stories from Anandalok" 
-            className="w-full h-full object-cover opacity-30 grayscale" 
+          <Image
+            src="/truth.jpg"
+            alt="Stories from Anandalok"
+            fill
+            className="object-cover opacity-30 grayscale"
+            sizes="100vw"
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
         </div>
@@ -319,8 +324,8 @@ export default function StoriesPage() {
       <section className="py-24 px-6 md:px-16 bg-background">
          <div className="container mx-auto max-w-7xl">
             <Link href={`/stories/${STORIES_DATA[0].slug}`} className="scroll-animate group grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden border border-border rounded-[4rem] hover:shadow-2xl transition-all duration-700 bg-backgroundSecondary">
-               <div className="aspect-[16/10] lg:aspect-auto relative overflow-hidden">
-                  <img src={`${STORIES_DATA[0].image}?q=80&w=1600&auto=format&fit=crop`} alt="Featured Story" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" />
+               <div className="relative aspect-[16/10] lg:aspect-auto overflow-hidden">
+                  <Image src={STORIES_DATA[0].image.startsWith('http') ? `${STORIES_DATA[0].image}?q=80&w=1600&auto=format&fit=crop` : STORIES_DATA[0].image} alt="Featured Story" fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" sizes="(max-width: 1024px) 100vw, 50vw" />
                   <div className="absolute top-8 left-8 px-6 py-3 bg-accent text-cream text-xs font-bold uppercase tracking-widest rounded-full shadow-lg">Featured Story</div>
                </div>
                <div className="p-12 md:p-20 flex flex-col justify-center space-y-8">

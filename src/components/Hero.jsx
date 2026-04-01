@@ -2,6 +2,7 @@
 
 import React, { useLayoutEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import gsap from 'gsap';
 
 export default function Hero() {
@@ -28,7 +29,7 @@ export default function Hero() {
     <section ref={container} className="relative min-h-screen flex items-center justify-center text-center px-6 pt-40 pb-20 bg-dark overflow-hidden">
       {/* Background Image & Gradient */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Anandalok Campus" className="w-full h-full object-cover opacity-40 grayscale" />
+        <Image src={heroImage} alt="Anandalok Campus" fill className="object-cover opacity-40 grayscale" sizes="100vw" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
       </div>
       

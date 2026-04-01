@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useLayoutEffect, useRef } from 'react';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -46,7 +47,7 @@ export default function Philosophy() {
   return (
     <section id="philosophy" ref={container} className="relative w-full py-24 bg-dark overflow-hidden flex items-center justify-center">
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <img src={textureImage} alt="Texture" className="bg-parallax absolute -top-10 left-0 w-full h-[120%] object-cover opacity-[0.1] mix-blend-screen" />
+        <Image src={textureImage} alt="Texture" fill className="bg-parallax object-cover opacity-[0.1] mix-blend-screen" sizes="100vw" />
         <div className="absolute inset-0 bg-dark/80"></div>
       </div>
       

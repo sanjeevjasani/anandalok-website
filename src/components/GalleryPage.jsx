@@ -3,6 +3,7 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import { Share2, ArrowRight, ChevronRight, ChevronLeft, X, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -89,10 +90,13 @@ export default function GalleryPage() {
       {/* SECTION 1: PAGE HERO */}
       <section className="relative min-h-screen flex items-center justify-center text-center px-6 pt-40 pb-20 bg-dark overflow-hidden">
         <div className="absolute inset-0 z-0">
-           <img 
-             src="/campus6.jpg" 
-             alt="Gallery Sanctuary" 
-             className="w-full h-full object-cover opacity-30 grayscale" 
+           <Image
+             src="/campus6.jpg"
+             alt="Gallery Sanctuary"
+             fill
+             className="object-cover opacity-30 grayscale"
+             sizes="100vw"
+             priority
            />
            <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
         </div>
@@ -157,11 +161,13 @@ export default function GalleryPage() {
                   className="scroll-animate group cursor-pointer space-y-4"
                   onClick={() => openLightbox(img)}
                 >
-                   <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-border bg-backgroundSecondary">
-                      <img 
-                        src={img.url.startsWith('http') ? `${img.url}?q=80&w=1200&auto=format&fit=crop` : img.url} 
-                        alt={img.title} 
-                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" 
+                   <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-border bg-backgroundSecondary">
+                      <Image
+                        src={img.url.startsWith('http') ? `${img.url}?q=80&w=1200&auto=format&fit=crop` : img.url}
+                        alt={img.title}
+                        fill
+                        className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                    </div>
                    <div className="px-6 space-y-1">
@@ -219,11 +225,13 @@ export default function GalleryPage() {
            </button>
            
            <div className="container mx-auto px-6 flex flex-col items-center gap-8">
-              <div className="relative max-w-4xl max-h-[70dvh] rounded-[2rem] overflow-hidden shadow-2xl">
-                 <img 
-                   src={selectedImage.url.startsWith('http') ? `${selectedImage.url}?q=100&w=1600` : selectedImage.url} 
-                   alt={selectedImage.title} 
-                   className="w-full h-full object-contain" 
+              <div className="relative w-full max-w-4xl aspect-video rounded-[2rem] overflow-hidden shadow-2xl">
+                 <Image
+                   src={selectedImage.url.startsWith('http') ? `${selectedImage.url}?q=100&w=1600` : selectedImage.url}
+                   alt={selectedImage.title}
+                   fill
+                   className="object-contain"
+                   sizes="100vw"
                  />
               </div>
               <div className="text-center space-y-4">

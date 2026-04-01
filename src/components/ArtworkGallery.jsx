@@ -2,6 +2,7 @@
 
 import React, { useLayoutEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -53,10 +54,12 @@ export default function ArtworkGallery() {
           {artworks.map((art, i) => (
             <div key={i} className="art-animate group cursor-pointer">
               <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-md mb-4">
-                <img 
-                  src={art.src} 
-                  alt={`${art.medium} by ${art.name}`} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                <Image
+                  src={art.src}
+                  alt={`${art.medium} by ${art.name}`}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 768px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>

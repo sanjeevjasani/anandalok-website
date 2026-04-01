@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState, useRef, useLayoutEffect } from 'react';
+import React, { useState, useRef, useLayoutEffect, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { X, ZoomIn } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -42,6 +43,13 @@ export default function Gallery() {
     return () => ctx.revert();
   }, []);
 
+  // Reset overflow on unmount in case lightbox is open during navigation
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+
   const openLightbox = (index) => {
     setCurrentIndex(index);
     setLightboxOpen(true);
@@ -75,7 +83,7 @@ export default function Gallery() {
             className="gallery-img relative aspect-[4/3] rounded-3xl overflow-hidden cursor-pointer group bg-backgroundSecondary"
             onClick={() => openLightbox(i)}
           >
-            <img src={src} alt="Gallery" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <Image src={src} alt="Gallery" fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" />
             <div className="absolute inset-0 bg-dark/0 group-hover:bg-dark/30 transition-colors duration-300 flex items-center justify-center">
               <ZoomIn className="text-cream opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={32} />
             </div>
@@ -90,7 +98,7 @@ export default function Gallery() {
           </button>
           
           <div className="relative w-full max-w-5xl aspect-video rounded-3xl overflow-hidden">
-            <img src={images[currentIndex]} alt="Lightbox" className="w-full h-full object-contain" />
+            <Image src={images[currentIndex]} alt="Lightbox" fill className="object-contain" sizes="100vw" />
           </div>
 
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4">
