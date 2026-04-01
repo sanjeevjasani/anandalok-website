@@ -1,13 +1,10 @@
 'use client';
 
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Phone, Mail, MapPin, Heart, Gift, Users, Building, Mic, Send, ChevronDown, CheckCircle2, ArrowRight, Shield } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import usePageAnimations from '../hooks/usePageAnimations';
 
 const ContactCard = ({ icon: Icon, title, detail, subDetail, href }) => (
   <a 
@@ -45,31 +42,7 @@ export default function ContactPage() {
   const container = useRef();
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-    let ctx = gsap.context(() => {
-      gsap.from('.hero-content', {
-        y: 40,
-        opacity: 0,
-        duration: 1.2,
-        stagger: 0.2,
-        ease: 'power3.out'
-      });
-
-      gsap.utils.toArray('.scroll-animate').forEach((elem) => {
-        gsap.from(elem, {
-          y: 30,
-          opacity: 0,
-          duration: 0.6,
-          scrollTrigger: {
-            trigger: elem,
-            start: 'top 90%',
-          }
-        });
-      });
-    }, container);
-    return () => ctx.revert();
-  }, []);
+  usePageAnimations(container, '.hero-content', { duration: 1.2, stagger: 0.2 });
 
   const handleSubmit = (e) => {
     e.preventDefault();

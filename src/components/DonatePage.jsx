@@ -1,13 +1,10 @@
 'use client';
 
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Heart, Users, Share2, Building2, MapPin, CheckCircle2, Shield, Globe, FileText, Eye, Copy, Check } from 'lucide-react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import usePageAnimations from '../hooks/usePageAnimations';
 
 const CopyButton = ({ text }) => {
   const [copied, setCopied] = useState(false);
@@ -30,31 +27,7 @@ const CopyButton = ({ text }) => {
 export default function DonatePage() {
   const container = useRef();
   
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-    let ctx = gsap.context(() => {
-      gsap.from('.donate-elem', {
-        y: 40,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.15,
-        ease: 'power3.out',
-      });
-
-      gsap.utils.toArray('.scroll-animate').forEach((elem) => {
-        gsap.from(elem, {
-          y: 30,
-          opacity: 0,
-          duration: 0.6,
-          scrollTrigger: {
-            trigger: elem,
-            start: 'top 90%',
-          }
-        });
-      });
-    }, container);
-    return () => ctx.revert();
-  }, []);
+  usePageAnimations(container, '.donate-elem');
 
   return (
     <div ref={container} className="bg-background min-h-screen">

@@ -62,7 +62,7 @@ export default function Origin() {
           <div className="origin-animate relative rounded-[3rem] overflow-hidden group shadow-xl aspect-[4/3]">
              <div className="absolute inset-0 bg-accent/10 group-hover:bg-accent/5 transition-colors duration-500 z-10"></div>
              <Image
-                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2670&auto=format&fit=crop"
+                src="/origin-bg.jpg"
                 alt="Anandalok history"
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-700"

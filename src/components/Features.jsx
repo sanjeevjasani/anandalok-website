@@ -64,17 +64,20 @@ const CardTypewriter = () => {
   useEffect(() => {
     let current = '';
     let i = 0;
+    let resetTimeout = null;
     const interval = setInterval(() => {
       if (i < codeString.length) {
         current += codeString[i];
         setText(current);
         i++;
       } else {
-        // Reset to re-type
-        setTimeout(() => { current = ''; setText(''); i = 0; }, 3000);
+        resetTimeout = setTimeout(() => { current = ''; setText(''); i = 0; }, 3000);
       }
     }, 50);
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      if (resetTimeout) clearTimeout(resetTimeout);
+    };
   }, []);
 
   return (

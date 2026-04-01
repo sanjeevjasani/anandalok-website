@@ -1,13 +1,10 @@
 'use client';
 
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Share2, ArrowRight, ChevronRight, ChevronLeft, X, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import usePageAnimations from '../hooks/usePageAnimations';
 
 const GALLERY_CATEGORIES = [
   { id: 'all', name: 'All' },
@@ -43,31 +40,7 @@ export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedImage, setSelectedImage] = useState(null);
 
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-    let ctx = gsap.context(() => {
-      gsap.from('.gallery-header', {
-        y: 40,
-        opacity: 0,
-        duration: 1.2,
-        delay: 0.5,
-        ease: 'power3.out'
-      });
-
-      gsap.utils.toArray('.scroll-animate').forEach((elem) => {
-        gsap.from(elem, {
-          y: 30,
-          opacity: 0,
-          duration: 0.6,
-          scrollTrigger: {
-            trigger: elem,
-            start: 'top 90%',
-          }
-        });
-      });
-    }, container);
-    return () => ctx.revert();
-  }, []);
+  usePageAnimations(container, '.gallery-header', { duration: 1.2, delay: 0.5 });
 
   const filteredImages = activeCategory === 'all' 
     ? GALLERY_IMAGES 

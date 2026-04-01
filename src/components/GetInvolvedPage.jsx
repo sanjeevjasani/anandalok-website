@@ -1,13 +1,10 @@
 'use client';
 
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Heart, Building2, Megaphone, MapPin, ArrowRight, Mail, Phone, Calendar, Hammer, Gift, CheckCircle2, Share2, Globe, MessageCircle, Users } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import usePageAnimations from '../hooks/usePageAnimations';
 
 const PathwayCard = ({ icon: Icon, title, desc, anchor }) => (
   <a 
@@ -30,31 +27,7 @@ const PathwayCard = ({ icon: Icon, title, desc, anchor }) => (
 export default function GetInvolvedPage() {
   const container = useRef();
 
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-    let ctx = gsap.context(() => {
-      gsap.from('.hero-content', {
-        y: 40,
-        opacity: 0,
-        duration: 1.2,
-        stagger: 0.2,
-        ease: 'power3.out'
-      });
-
-      gsap.utils.toArray('.scroll-animate').forEach((elem) => {
-        gsap.from(elem, {
-          y: 30,
-          opacity: 0,
-          duration: 0.6,
-          scrollTrigger: {
-            trigger: elem,
-            start: 'top 90%',
-          }
-        });
-      });
-    }, container);
-    return () => ctx.revert();
-  }, []);
+  usePageAnimations(container, '.hero-content', { duration: 1.2, stagger: 0.2 });
 
   return (
     <div ref={container} className="bg-background min-h-screen selection:bg-accent selection:text-white">

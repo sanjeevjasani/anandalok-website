@@ -1,14 +1,11 @@
 'use client';
 
-import React, { useLayoutEffect, useRef, useState, useMemo } from 'react';
+import React, { useRef, useState, useMemo } from 'react';
 import { Share2, ArrowRight, Clock, Calendar, Link as LinkIcon } from 'lucide-react';
 import Link from 'next/link'
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import usePageAnimations from '../hooks/usePageAnimations';
 
 const STORIES_DATA = [
   {
@@ -173,31 +170,7 @@ export default function StoriesPage() {
 
   const categories = ['All Stories', 'Resident Journeys', 'Family Voices', 'Life at Anandalok', 'Understanding Autism'];
 
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-    let ctx = gsap.context(() => {
-      gsap.from('.story-hero-content', {
-        y: 40,
-        opacity: 0,
-        duration: 1.2,
-        stagger: 0.2,
-        ease: 'power3.out'
-      });
-
-      gsap.utils.toArray('.scroll-animate').forEach((elem) => {
-        gsap.from(elem, {
-          y: 30,
-          opacity: 0,
-          duration: 0.6,
-          scrollTrigger: {
-            trigger: elem,
-            start: 'top 90%',
-          }
-        });
-      });
-    }, container);
-    return () => ctx.revert();
-  }, [slug]);
+  usePageAnimations(container, '.story-hero-content', { duration: 1.2, stagger: 0.2 });
 
   const filteredStories = useMemo(() => {
     if (activeCategory === 'All Stories') return STORIES_DATA;
@@ -255,7 +228,7 @@ export default function StoriesPage() {
                          {/* LinkedIn SVG */}
                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                        </button>
-                       <button className="w-12 h-12 bg-background-secondary border border-border rounded-full flex items-center justify-center text-dark/60 hover:text-accent hover:border-accent transition-all duration-500" onClick={() => navigator.clipboard.writeText(window.location.href)}><LinkIcon size={20} /></button>
+                       <button className="w-12 h-12 bg-background-secondary border border-border rounded-full flex items-center justify-center text-dark/60 hover:text-accent hover:border-accent transition-all duration-500" onClick={() => navigator.clipboard.writeText(window.location.href).catch(() => {})}><LinkIcon size={20} /></button>
                     </div>
                  </div>
                  

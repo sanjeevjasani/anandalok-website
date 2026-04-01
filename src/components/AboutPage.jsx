@@ -1,13 +1,10 @@
 'use client';
 
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Home, Sun, Heart, Paintbrush, Sprout, Users, Building2, Shield, Globe, FileText, Eye, CheckCircle2, Quote } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import usePageAnimations from '../hooks/usePageAnimations';
 
 const TimelineNode = ({ year, title, desc, align }) => (
   <div className={`relative flex flex-col md:flex-row items-center mb-16 last:mb-0 group ${align === 'right' ? 'md:flex-row-reverse' : ''}`}>
@@ -27,31 +24,7 @@ const TimelineNode = ({ year, title, desc, align }) => (
 export default function AboutPage() {
   const container = useRef();
 
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-    let ctx = gsap.context(() => {
-      gsap.from('.about-elem', {
-        y: 40,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.15,
-        ease: 'power3.out',
-      });
-
-      gsap.utils.toArray('.scroll-animate').forEach((elem) => {
-        gsap.from(elem, {
-          y: 30,
-          opacity: 0,
-          duration: 0.6,
-          scrollTrigger: {
-            trigger: elem,
-            start: 'top 90%',
-          }
-        });
-      });
-    }, container);
-    return () => ctx.revert();
-  }, []);
+  usePageAnimations(container, '.about-elem');
 
   return (
     <div ref={container} className="bg-background min-h-screen selection:bg-accent selection:text-white">
@@ -60,7 +33,7 @@ export default function AboutPage() {
       <section className="relative min-h-screen flex items-center justify-center text-center px-6 pt-40 pb-20 bg-dark overflow-hidden">
         <div className="absolute inset-0 z-0">
            <Image
-             src="https://images.unsplash.com/photo-1505483531331-fc3cf89fd382?q=80&w=2670&auto=format&fit=crop"
+             src="/hero-about.jpg"
              alt="Two Families, One Question"
              fill
              className="object-cover opacity-40 grayscale"

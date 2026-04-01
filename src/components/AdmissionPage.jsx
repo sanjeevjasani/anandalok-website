@@ -1,13 +1,10 @@
 'use client';
 
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { FileDown, Phone, Mail, CheckCircle2, ChevronDown, Home, Sun, Info, ArrowRight, Users, MapPin, Shield, Calendar } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import usePageAnimations from '../hooks/usePageAnimations';
 
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -42,31 +39,7 @@ const AdmissionStep = ({ number, title, desc }) => (
 export default function AdmissionPage() {
   const container = useRef();
 
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-    let ctx = gsap.context(() => {
-      gsap.from('.hero-text', {
-        y: 40,
-        opacity: 0,
-        duration: 1.2,
-        stagger: 0.2,
-        ease: 'power3.out'
-      });
-
-      gsap.utils.toArray('.scroll-animate').forEach((elem) => {
-        gsap.from(elem, {
-          y: 30,
-          opacity: 0,
-          duration: 0.6,
-          scrollTrigger: {
-            trigger: elem,
-            start: 'top 90%',
-          }
-        });
-      });
-    }, container);
-    return () => ctx.revert();
-  }, []);
+  usePageAnimations(container, '.hero-text', { duration: 1.2, stagger: 0.2 });
 
   return (
     <div ref={container} className="bg-background min-h-screen selection:bg-accent selection:text-white">
@@ -74,7 +47,7 @@ export default function AdmissionPage() {
       {/* SECTION 1: PAGE HERO */}
       <section className="relative min-h-screen flex items-center justify-center text-center px-6 pt-40 pb-20 bg-dark overflow-hidden">
         <div className="absolute inset-0 z-0">
-           <Image src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=2670&auto=format&fit=crop" alt="Sanctuary Home" fill className="object-cover opacity-30 grayscale" sizes="100vw" priority />
+           <Image src="/hero-admission.jpg" alt="Sanctuary Home" fill className="object-cover opacity-30 grayscale" sizes="100vw" priority />
            <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
         </div>
         <div className="relative z-10 max-w-4xl space-y-12">

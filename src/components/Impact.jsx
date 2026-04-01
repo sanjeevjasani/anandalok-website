@@ -11,31 +11,32 @@ const StatItem = ({ endValue, label, suffix = "" }) => {
   const ref = useRef();
 
   useEffect(() => {
-    ScrollTrigger.create({
+    const trigger = ScrollTrigger.create({
       trigger: ref.current,
       start: 'top 90%',
       onEnter: () => {
         let start = 0;
         const duration = 2000;
         const startTime = performance.now();
-        
+
         const animate = (currentTime) => {
           const elapsedTime = currentTime - startTime;
           const progress = Math.min(elapsedTime / duration, 1);
           const currentCount = progress * endValue;
-          
+
           setCount(currentCount);
-          
+
           if (progress < 1) {
             requestAnimationFrame(animate);
           } else {
             setCount(endValue);
           }
         };
-        
+
         requestAnimationFrame(animate);
       }
     });
+    return () => trigger.kill();
   }, [endValue]);
 
   return (

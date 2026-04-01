@@ -42,7 +42,7 @@ export default function Philosophy() {
     return () => ctx.revert();
   }, []);
 
-  const textureImage = "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2674&auto=format&fit=crop";
+  const textureImage = "/philosophy-texture.jpg";
 
   return (
     <section id="philosophy" ref={container} className="relative w-full py-24 bg-dark overflow-hidden flex items-center justify-center">
