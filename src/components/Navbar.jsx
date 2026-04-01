@@ -45,7 +45,13 @@ export default function Navbar() {
       }`}
     >
       <div className="flex items-center justify-between px-6 py-3">
-        <Link href="/" className="font-heading font-bold text-xl tracking-tight cursor-pointer z-50">Anandalok</Link>
+        <Link href="/" className="cursor-pointer z-50 flex items-center">
+          <img 
+            src="/anandalok-logo.png" 
+            alt="Anandalok Logo" 
+            className={`h-10 w-auto transition-all duration-500 ${!scrolled && !isOpen ? 'brightness-0 invert' : ''}`} 
+          />
+        </Link>
         
         {/* Desktop Links */}
         <div className="hidden lg:flex gap-6 text-sm font-medium">

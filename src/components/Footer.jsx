@@ -11,7 +11,9 @@ export default function Footer() {
         
         {/* Column 1: Brand */}
         <div className="flex flex-col gap-6">
-          <Link href="/" className="font-heading font-bold text-4xl tracking-tight">Anandalok</Link>
+          <Link href="/" className="block">
+            <img src="/anandalok-logo.png" alt="Anandalok Logo" className="h-16 w-auto brightness-0 invert" />
+          </Link>
           <p className="text-cream/60 max-w-sm leading-relaxed text-lg">
             A residential care sanctuary for individuals with autism and intellectual disabilities. Empowering lives and nurturing potential since 1989.
           </p>
