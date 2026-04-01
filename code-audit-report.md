@@ -86,24 +86,52 @@ Sorted by impact — High before Medium before Low.
 
 ## Changes Applied
 
-| File | Change |
-|------|--------|
-| `src/components/Gallery.jsx` | Added `useEffect` unmount cleanup to reset `document.body.style.overflow` when lightbox is open during navigation |
-| `src/App.css` | Deleted — Vite scaffold artifact, never imported in the Next.js codebase |
-| `next.config.js` | Created — added `remotePatterns` to allow Next.js `<Image>` to serve `images.unsplash.com` URLs |
-| `src/components/Navbar.jsx` | Replaced `<img>` with `<Image>` (logo) |
-| `src/components/Footer.jsx` | Replaced `<img>` with `<Image>` (logo) |
-| `src/components/Hero.jsx` | Replaced `<img>` with `<Image fill>` + `priority` (LCP hero image) |
-| `src/components/Gallery.jsx` | Replaced all `<img>` with `<Image fill>` (grid thumbnails + lightbox) |
-| `src/components/ArtworkGallery.jsx` | Replaced `<img>` with `<Image fill>` (artwork grid) |
-| `src/components/Truth.jsx` | Replaced `<img>` with `<Image fill>` |
-| `src/components/SuccessStory.jsx` | Replaced `<img>` with `<Image fill>` |
-| `src/components/Origin.jsx` | Replaced `<img>` with `<Image fill>` + added `aspect-[4/3]` wrapper |
-| `src/components/Philosophy.jsx` | Replaced `<img>` with `<Image fill>` (parallax texture) |
-| `src/components/AboutPage.jsx` | Replaced all 6 `<img>` with `<Image fill>` (hero, two story images, 4-grid) |
-| `src/components/AdmissionPage.jsx` | Replaced `<img>` with `<Image fill priority>` (hero) |
-| `src/components/ContactPage.jsx` | Replaced `<img>` with `<Image fill priority>` (hero) |
-| `src/components/DonatePage.jsx` | Replaced `<img>` with `<Image fill priority>` (hero) |
-| `src/components/GalleryPage.jsx` | Replaced all `<img>` with `<Image fill>` (hero, gallery grid, lightbox) |
-| `src/components/GetInvolvedPage.jsx` | Replaced all 3 `<img>` with `<Image fill>` |
-| `src/components/StoriesPage.jsx` | Replaced all `<img>` with `<Image fill>`; removed unused `useRouter`, `ChevronRight`, `MessageSquare` imports |
+| # | File | Change |
+|---|------|--------|
+| 1 | `src/components/Gallery.jsx` | Added `useEffect` unmount cleanup to reset `document.body.style.overflow` when lightbox is open during navigation |
+| 3 | `src/App.css` | Deleted — Vite scaffold artifact, never imported in the Next.js codebase |
+| 4 | `src/components/Navbar.jsx` | Replaced `<img>` with `<Image>` (logo); fixed aspect ratio warning with `style={{ width: 'auto' }}` |
+| 4 | `src/components/Footer.jsx` | Replaced `<img>` with `<Image>` (logo); fixed aspect ratio warning |
+| 4 | `src/components/Hero.jsx` | Replaced `<img>` with `<Image fill priority>` (LCP hero image) |
+| 4 | `src/components/Gallery.jsx` | Replaced all `<img>` with `<Image fill>` (grid thumbnails + lightbox) |
+| 4 | `src/components/ArtworkGallery.jsx` | Replaced `<img>` with `<Image fill>` (artwork grid) |
+| 4 | `src/components/Truth.jsx` | Replaced `<img>` with `<Image fill>` |
+| 4 | `src/components/SuccessStory.jsx` | Replaced `<img>` with `<Image fill>` |
+| 4 | `src/components/Origin.jsx` | Replaced `<img>` with `<Image fill>` + added `aspect-[4/3]` wrapper |
+| 4 | `src/components/Philosophy.jsx` | Replaced `<img>` with `<Image fill>` (parallax texture) |
+| 4 | `src/components/AboutPage.jsx` | Replaced all 6 `<img>` with `<Image fill>` |
+| 4 | `src/components/AdmissionPage.jsx` | Replaced `<img>` with `<Image fill priority>` (hero) |
+| 4 | `src/components/ContactPage.jsx` | Replaced `<img>` with `<Image fill priority>` (hero) |
+| 4 | `src/components/DonatePage.jsx` | Replaced `<img>` with `<Image fill priority>` (hero) |
+| 4 | `src/components/GalleryPage.jsx` | Replaced all `<img>` with `<Image fill>`; removed dead `.hero-mosaic-img` GSAP animation |
+| 4 | `src/components/GetInvolvedPage.jsx` | Replaced all 3 `<img>` with `<Image fill>` |
+| 4 | `src/components/StoriesPage.jsx` | Replaced all `<img>` with `<Image fill>` |
+| 5 | `package.json` | Removed unused deps: `react-router-dom`, `@gsap/react`, `@vitejs/plugin-react` |
+| 6 | `src/components/Impact.jsx` | Fixed `ScrollTrigger.create()` leak — now calls `trigger.kill()` on unmount |
+| 7 | `src/components/Features.jsx` | Fixed `setTimeout` leak in `CardTypewriter` — timeout is now cleared on unmount |
+| 9 | `src/hooks/usePageAnimations.js` | Created shared hook — replaced ~105 lines of copy-pasted GSAP setup across 7 page components |
+| 9 | `src/components/AboutPage.jsx` | Replaced inline GSAP setup with `usePageAnimations` hook |
+| 9 | `src/components/AdmissionPage.jsx` | Replaced inline GSAP setup with `usePageAnimations` hook |
+| 9 | `src/components/ContactPage.jsx` | Replaced inline GSAP setup with `usePageAnimations` hook |
+| 9 | `src/components/DonatePage.jsx` | Replaced inline GSAP setup with `usePageAnimations` hook |
+| 9 | `src/components/GalleryPage.jsx` | Replaced inline GSAP setup with `usePageAnimations` hook |
+| 9 | `src/components/GetInvolvedPage.jsx` | Replaced inline GSAP setup with `usePageAnimations` hook |
+| 9 | `src/components/StoriesPage.jsx` | Replaced inline GSAP setup with `usePageAnimations` hook; removed unused `useRouter`, `ChevronRight`, `MessageSquare` imports |
+| 10 | `src/components/ContactPage.jsx` | Fixed Google Maps embed — replaced placeholder coordinates with real Anandalok campus pin (22.7032599, 88.5031953) |
+| 11 | `src/app/layout.jsx` | Removed duplicate noise overlay `<div>` — CSS `body::before` in `globals.css` is sufficient |
+| 12 | `src/components/StoriesPage.jsx` | Added `.catch(() => {})` to `navigator.clipboard` to suppress unhandled rejection in non-HTTPS contexts |
+| 13 | `src/components/StoriesPage.jsx` | Removed dead imports: `ChevronRight`, `MessageSquare`, `useRouter` |
+| 14 | `public/hero-about.jpg` | Downloaded from Unsplash — was previously an external CDN dependency |
+| 14 | `public/hero-admission.jpg` | Downloaded from Unsplash — was previously an external CDN dependency |
+| 14 | `public/origin-bg.jpg` | Downloaded from Unsplash — was previously an external CDN dependency |
+| 14 | `public/philosophy-texture.jpg` | Downloaded from Unsplash — was previously an external CDN dependency |
+| 14 | `next.config.js` | Updated — removed `remotePatterns` for Unsplash now that all images are self-hosted |
+
+---
+
+## Still Pending
+
+| # | What | What you need before starting |
+|---|------|-------------------------------|
+| 2 | Wire up the two non-functional "Donate Now" buttons in `DonatePage.jsx` | A payment gateway account (Razorpay recommended for India). Once you have API keys, this is a small change. |
+| 8 | Wire up the contact form in `ContactPage.jsx` and the newsletter signup in `StoriesPage.jsx` | **Contact form:** a Formspree or EmailJS account (free). **Newsletter:** a Mailchimp account and list ID (free up to 500 subscribers). Share the keys/URLs when ready. |
