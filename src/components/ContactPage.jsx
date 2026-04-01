@@ -276,13 +276,13 @@ export default function ContactPage() {
               </div>
               <div className="scroll-animate relative">
                  <div className="aspect-square bg-background rounded-[4rem] overflow-hidden border border-border shadow-2xl">
-                    <iframe 
+                    <iframe
                       title="Anandalok Map"
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.123!2d88.467!3d22.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDQyJzAwLjAiTiA4OMKwMjgnMDEuMiJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" 
-                      width="100%" 
-                      height="100%" 
-                      style={{ border: 0 }} 
-                      allowFullScreen="" 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.0!2d88.5006204!3d22.7032599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f8a18be21ce753%3A0xed722e7956f3f3c6!2sANANDALOK!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen=""
                       loading="lazy"
                     ></iframe>
                  </div>
