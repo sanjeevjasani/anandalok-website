@@ -46,14 +46,6 @@ export default function GalleryPage() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
     let ctx = gsap.context(() => {
-      gsap.from('.hero-mosaic-img', {
-        scale: 1.1,
-        opacity: 0,
-        duration: 1.5,
-        stagger: 0.1,
-        ease: 'power3.out'
-      });
-
       gsap.from('.gallery-header', {
         y: 40,
         opacity: 0,

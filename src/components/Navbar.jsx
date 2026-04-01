@@ -52,7 +52,8 @@ export default function Navbar() {
             alt="Anandalok Logo"
             width={160}
             height={40}
-            className={`h-10 w-auto transition-all duration-500 ${!scrolled && !isOpen ? 'brightness-0 invert' : ''}`}
+            className={`h-10 transition-all duration-500 ${!scrolled && !isOpen ? 'brightness-0 invert' : ''}`}
+            style={{ width: 'auto' }}
           />
         </Link>
         
