@@ -74,7 +74,7 @@
 > At Anandalok, we don't believe in managing people with autism. We believe in celebrating them. Our campus isn't a hospital. It's a canvas — where every resident finds their colour, their rhythm, their voice.
 
 **After:**
-> At Anandalok, we don't believe in managing people with autism, Down syndrome, ADHD, or epilepsy. We believe in celebrating them. Our campus isn't a hospital. It's a canvas — where every resident finds their colour, their rhythm, their voice.
+> At Anandalok, we don't believe in managing people with mental disabilities. We believe in celebrating them. Our campus isn't a hospital. It's a canvas — where every resident finds their colour, their rhythm, their voice.
 
 ---
 
