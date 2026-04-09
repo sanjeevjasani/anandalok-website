@@ -308,10 +308,10 @@
 | Truth.jsx | Home | 2 changes |
 | Philosophy.jsx | Home | 1 change |
 | FAQ.jsx | Home | 1 change |
-| AboutPage.jsx | About | 8 changes |
+| AboutPage.jsx | About | 10 changes |
 | AdmissionPage.jsx | Admissions | 2 changes |
-| GetInvolvedPage.jsx | Get Involved | 4 changes |
+| GetInvolvedPage.jsx | Get Involved | 5 changes |
 | DonatePage.jsx | Donate | 1 change |
 | Footer.jsx | All pages | 1 change |
 
-**Total: 23 changes across 11 files and 6 pages**
+**Total: 26 changes across 11 files and 6 pages**
