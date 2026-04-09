@@ -36,7 +36,7 @@ export default function Hero() {
       {/* Centered Content */}
       <div className="container mx-auto max-w-5xl space-y-12 relative z-10 hero-content">
         <div className="hero-elem font-heading font-bold text-accent tracking-widest uppercase text-sm block">
-          Since 1989. Kolkata's First Residential Sanctuary <br className="hidden md:block" /> for Individuals with Autism.
+          Since 1989. Kolkata's First Residential Sanctuary <br className="hidden md:block" /> for Individuals with Autism, Down Syndrome, ADHD & More.
         </div>
         
         <h1 className="hero-elem font-heading font-bold text-5xl md:text-7xl text-cream leading-[0.9]">

@@ -131,7 +131,7 @@ export default function Protocol() {
       <ProtocolCard 
         step="03"
         title="Day Care Support"
-        desc="Not every family is ready for residential care — and they do not have to be. Our day care programme offers professional support, structured learning, creative activities, and therapeutic interventions for individuals with autism living at home in the Kolkata region. Children and adults arrive each morning and return home each evening — better supported and more connected than the day before."
+        desc="Not every family is ready for residential care — and they do not have to be. Our day care programme offers professional support, structured learning, creative activities, and therapeutic interventions for individuals with autism, Down syndrome, ADHD, epilepsy, and other intellectual disabilities living at home in the Kolkata region. Children and adults arrive each morning and return home each evening — better supported and more connected than the day before."
         SVGAnimation={WavePulse}
         isLast={true}
       />

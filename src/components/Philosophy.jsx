@@ -59,7 +59,7 @@ export default function Philosophy() {
           We focus on unlocking the <br/> <span className="text-accent">artist inside.</span>
         </p>
         <p className="phil-text mt-8 max-w-2xl text-cream/70 font-body text-lg md:text-xl leading-relaxed">
-          At Anandalok, we don't believe in managing people with autism. We believe in celebrating them. Our campus isn't a hospital. It's a canvas — where every resident finds their colour, their rhythm, their voice.
+          At Anandalok, we don't believe in managing people with autism, Down syndrome, ADHD, or epilepsy. We believe in celebrating them. Our campus isn't a hospital. It's a canvas — where every resident finds their colour, their rhythm, their voice.
         </p>
       </div>
     </section>

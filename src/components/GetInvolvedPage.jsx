@@ -52,7 +52,7 @@ export default function GetInvolvedPage() {
              You Do Not Need to <br/> Write a Cheque to <br/> Change a Life.
            </h1>
            <p className="font-body text-xl md:text-2xl text-cream/70 max-w-3xl mx-auto leading-relaxed">
-             Your time, your skills, your network, your voice — every one of them has the power to give someone with autism a better tomorrow.
+             Your time, your skills, your network, your voice — every one of them has the power to give someone with a developmental or intellectual disability a better tomorrow.
            </p>
         </div>
       </section>
@@ -153,7 +153,7 @@ export default function GetInvolvedPage() {
               <div className="space-y-6">
                 <h4 className="font-heading font-bold text-2xl text-dark">Why Companies Partner With Us</h4>
                 <div className="space-y-4">
-                   {["80G Tax Exemption - All contributions are tax-deductible", "FCRA Approved - International legally compliant", "Complete Transparency - Audited and open door policy", "36 Years Track Record - Oldest autism sanctuary in the region"].map((point, i) => (
+                   {["80G Tax Exemption - All contributions are tax-deductible", "FCRA Approved - International legally compliant", "Complete Transparency - Audited and open door policy", "36 Years Track Record - Oldest residential care sanctuary in the region"].map((point, i) => (
                       <div key={i} className="flex gap-3 text-dark/70 font-body"><CheckCircle2 size={18} className="text-accent flex-shrink-0" /> {point}</div>
                    ))}
                 </div>
@@ -172,11 +172,11 @@ export default function GetInvolvedPage() {
       <section id="awareness" className="py-32 px-6 md:px-16 bg-backgroundSecondary">
         <div className="container mx-auto max-w-4xl text-center">
            <span className="scroll-animate font-data text-accent tracking-widest uppercase text-xs font-bold block mb-4">SPREAD THE WORD</span>
-           <h2 className="scroll-animate font-heading font-bold text-4xl md:text-6xl text-dark leading-tight mb-8">The Biggest Barrier Our Residents Face Is Not Autism. It Is Misunderstanding.</h2>
-           
+           <h2 className="scroll-animate font-heading font-bold text-4xl md:text-6xl text-dark leading-tight mb-8">The Biggest Barrier Our Residents Face Is Not Their Condition. It Is Misunderstanding.</h2>
+
            <div className="scroll-animate space-y-6 text-dark/70 font-body text-lg leading-relaxed mb-12">
-              <p>Most people in India still confuse autism with mental illness. You can help change that. Not with money. With your voice.</p>
-              <p>Share our story. Talk about Anandalok. Forward our website. Tell your family what autism actually is. One shared post can shift understanding from fear to compassion.</p>
+              <p>Most people in India still confuse autism, Down syndrome, and ADHD with mental illness. You can help change that. Not with money. With your voice.</p>
+              <p>Share our story. Talk about Anandalok. Forward our website. Tell your family what autism, Down syndrome, ADHD, and epilepsy actually are. One shared post can shift understanding from fear to compassion.</p>
            </div>
 
            {/* Social Sharing Icons using SVG for brands */}

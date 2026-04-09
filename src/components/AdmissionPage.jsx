@@ -56,7 +56,7 @@ export default function AdmissionPage() {
             You Have Been <br/> Carrying This Alone <br/> for Too Long. <br/> Let Us Help.
           </h1>
           <p className="hero-text font-body text-xl md:text-2xl text-cream/70 max-w-2xl mx-auto leading-relaxed">
-            Whether you are looking for a permanent home or daily support for your loved one with autism, Anandalok is here. We have been welcoming families just like yours since 1989.
+            Whether you are looking for a permanent home or daily support for your loved one with autism, Down syndrome, ADHD, epilepsy, or another intellectual disability, Anandalok is here. We have been welcoming families just like yours since 1989.
           </p>
           <div className="hero-text flex flex-wrap justify-center gap-6">
              <a href="#residential" className="px-10 py-5 bg-accent text-cream font-heading font-bold rounded-2xl btn-magnetic text-xl">Residential Care</a>
@@ -160,7 +160,7 @@ export default function AdmissionPage() {
                     </div>
                     <h4 className="font-heading font-bold text-2xl text-dark leading-tight">Day Care at a Glance</h4>
                     <ul className="space-y-6 font-body text-sm text-dark/70">
-                       <li className="flex gap-4"><Info size={18} className="text-accent flex-shrink-0" /> Children & Adults with autism</li>
+                       <li className="flex gap-4"><Info size={18} className="text-accent flex-shrink-0" /> Children & Adults with autism, Down syndrome, ADHD & more</li>
                        <li className="flex gap-4"><Calendar size={18} className="text-accent flex-shrink-0" /> Mon-Fri | 10:30 AM - 4:30 PM</li>
                        <li className="flex gap-4"><Users size={18} className="text-accent flex-shrink-0" /> Professional Therapy & Art</li>
                        <li className="flex gap-4"><CheckCircle2 size={18} className="text-accent flex-shrink-0" /> Lunch & Snacks provided</li>

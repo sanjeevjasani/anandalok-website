@@ -169,7 +169,7 @@ export default function Features() {
           <CardTypewriter />
           <div>
             <h3 className="font-heading font-bold text-xl mb-2 text-dark">Creative Expression</h3>
-            <p className="font-body text-dark/70 text-sm">Our residents paint, sing, dance, farm, and craft. Every day, they prove that autism is not a limitation — it is a different kind of brilliance.</p>
+            <p className="font-body text-dark/70 text-sm">Our residents paint, sing, dance, farm, and craft. Every day, they prove that a disability diagnosis is not a limitation — it is a different kind of brilliance.</p>
           </div>
         </div>
 

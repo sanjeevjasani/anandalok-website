@@ -134,7 +134,7 @@ export default function AboutPage() {
             <h2 className="font-heading font-bold text-4xl md:text-6xl text-dark leading-tight">36 Years Later, <br/> the Promise Still Holds</h2>
             <div className="space-y-6 text-dark/80 font-body text-lg leading-relaxed">
               <p>
-                Today, Anandalok is home to 35 residents — men and women on the autism spectrum and with intellectual disabilities — living on a lush 2.4-acre campus in Madhyamgram, North 24 Parganas.
+                Today, Anandalok is home to 35 residents — men and women living with autism, Down syndrome, ADHD, epilepsy, and other intellectual disabilities — on a lush 2.4-acre campus in Madhyamgram, North 24 Parganas.
               </p>
               <p>
                 It is, to our knowledge, the oldest continuously running residential care sanctuary for individuals with autism in the Kolkata region.
@@ -217,7 +217,7 @@ export default function AboutPage() {
                 <h2 className="font-heading font-bold text-4xl md:text-5xl text-dark">A Family of Professionals Who Chose to Stay</h2>
                 <div className="space-y-6 text-dark/80 font-body text-lg leading-relaxed">
                   <p>
-                    Caring for individuals with autism is not a 9-to-5 job. It is a calling. The people who work at Anandalok did not end up here by accident. They chose this work. Many have stayed for decades. They are not staff. They are family.
+                    Caring for individuals with autism, Down syndrome, ADHD, and epilepsy is not a 9-to-5 job. It is a calling. The people who work at Anandalok did not end up here by accident. They chose this work. Many have stayed for decades. They are not staff. They are family.
                   </p>
                   <p className="font-bold text-dark italic">
                     Today, Anandalok is run by a dedicated team.
@@ -282,30 +282,30 @@ export default function AboutPage() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
              <div className="scroll-animate space-y-8">
-                <span className="font-data text-accent tracking-widest uppercase text-xs font-bold block">Let Us Clear Something Up</span>
-                <h2 className="font-heading font-bold text-4xl md:text-6xl text-dark leading-tight">Autism Is Not Mental Illness. <br/> Here Is What It Actually Is.</h2>
+                <span className="font-data text-accent tracking-widest uppercase text-xs font-bold block">Understanding the Conditions We Support</span>
+                <h2 className="font-heading font-bold text-4xl md:text-6xl text-dark leading-tight">These Conditions Are Not Mental Illness. <br/> Here Is What They Actually Are.</h2>
                 <div className="space-y-6 text-dark/80 font-body text-lg leading-relaxed">
                   <p>
-                    One of the biggest obstacles facing individuals with autism in India is not the condition itself. It is the way society misunderstands it.
+                    One of the biggest obstacles facing individuals with autism, Down syndrome, ADHD, and epilepsy in India is not the condition itself. It is the way society misunderstands it.
                   </p>
                   <p>
-                    Autism is a neurodevelopmental condition — people are born with it. It is not caused by bad parenting or bad luck. It is not something to be cured. It is a different way of experiencing the world.
+                    These are neurodevelopmental conditions — people are born with them. They are not caused by bad parenting or bad luck. They are not something to be cured. They are different ways of experiencing the world.
                   </p>
                   <p className="font-bold text-dark italic">
-                    The problem is not autism. The problem is a society that still confuses it with madness. That ends here.
+                    The problem is not the condition. The problem is a society that still confuses it with madness. That ends here.
                   </p>
                 </div>
              </div>
              
              <div className="scroll-animate grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-background p-8 rounded-[3rem] border border-border">
-                   <h4 className="font-heading font-bold text-xl text-accent mb-6">Autism IS</h4>
+                   <h4 className="font-heading font-bold text-xl text-accent mb-6">These Conditions ARE</h4>
                    <ul className="space-y-4 text-sm text-dark/70 font-body">
                       {[
-                        "A neurodevelopmental condition from birth",
+                        "Neurodevelopmental — present from birth",
                         "A spectrum — every person is different",
-                        "Characterised by social interaction differences",
-                        "Manageable with support and love",
+                        "Varied: autism, Down syndrome, ADHD, epilepsy & more",
+                        "Manageable with support, structure, and love",
                         "Accompanied by extraordinary creative abilities"
                       ].map((item, i) => (
                         <li key={i} className="flex gap-3"><CheckCircle2 size={16} className="text-accent flex-shrink-0" /> {item}</li>
@@ -313,7 +313,7 @@ export default function AboutPage() {
                    </ul>
                 </div>
                 <div className="bg-background p-8 rounded-[3rem] border border-border">
-                   <h4 className="font-heading font-bold text-xl text-accent mb-6">Autism is NOT</h4>
+                   <h4 className="font-heading font-bold text-xl text-accent mb-6">These Conditions are NOT</h4>
                    <ul className="space-y-4 text-sm text-dark/70 font-body">
                       {[
                         "A mental illness",

@@ -16,7 +16,7 @@ export default function Footer() {
             <Image src="/anandalok-logo.png" alt="Anandalok Logo" width={200} height={64} className="h-16 brightness-0 invert" style={{ width: 'auto' }} />
           </Link>
           <p className="text-cream/60 max-w-sm leading-relaxed text-lg">
-            A residential care sanctuary for individuals with autism and intellectual disabilities. Empowering lives and nurturing potential since 1989.
+            A residential care sanctuary for individuals with autism, Down syndrome, ADHD, epilepsy, and other intellectual disabilities. Empowering lives and nurturing potential since 1989.
           </p>
           
           <div className="flex flex-wrap gap-4 mt-2">
