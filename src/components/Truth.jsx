@@ -41,7 +41,7 @@ export default function Truth() {
 
           <div className="truth-animate space-y-6 text-dark/80 font-body text-lg leading-relaxed max-w-2xl">
             <p>
-              Our residents are not mentally ill. They are not dangerous. They are not broken. They live with autism, Down syndrome, ADHD, epilepsy, and other intellectual disabilities — neurological differences they were born with that make them experience the world in extraordinary ways.
+              Our residents are not mentally ill. They are not dangerous. They are not broken. They have autism and intellectual disabilities — neurological differences they were born with that make them experience the world in extraordinary ways.
             </p>
             <p>
               They are artists who paint in colours most of us never notice. Musicians who feel rhythm before they hear it. Gardeners who coax life from soil with a patience that humbles everyone around them.

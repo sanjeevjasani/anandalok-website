@@ -54,18 +54,6 @@
 
 ---
 
-### Truth.jsx — Body paragraph 1
-
-**Page:** Home (/)
-
-**Before:**
-> Our residents are not mentally ill. They are not dangerous. They are not broken. They have autism and intellectual disabilities — neurological differences they were born with that make them experience the world in extraordinary ways.
-
-**After:**
-> Our residents are not mentally ill. They are not dangerous. They are not broken. They live with autism, Down syndrome, ADHD, epilepsy, and other intellectual disabilities — neurological differences they were born with that make them experience the world in extraordinary ways.
-
----
-
 ### Truth.jsx — Body paragraph 3
 
 **Page:** Home (/)
@@ -317,7 +305,7 @@
 | Hero.jsx | Home | 1 change |
 | Features.jsx | Home | 1 change |
 | Protocol.jsx | Home | 1 change |
-| Truth.jsx | Home | 3 changes |
+| Truth.jsx | Home | 2 changes |
 | Philosophy.jsx | Home | 1 change |
 | FAQ.jsx | Home | 1 change |
 | AboutPage.jsx | About | 8 changes |
@@ -326,4 +314,4 @@
 | DonatePage.jsx | Donate | 1 change |
 | Footer.jsx | All pages | 1 change |
 
-**Total: 24 changes across 11 files and 6 pages**
+**Total: 23 changes across 11 files and 6 pages**
