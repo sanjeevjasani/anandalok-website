@@ -66,7 +66,7 @@ export default function DonatePage() {
             </h2>
             <div className="space-y-6 text-dark/80 font-body text-lg leading-relaxed">
               <p>
-                Right now, 35 individuals with autism, Down syndrome, ADHD, epilepsy, and other intellectual disabilities call Anandalok home. They live, learn, create, and thrive on our 2.4-acre campus near Kolkata. Sixteen full-time staff members care for them every single day.
+                Right now, 35 individuals with intellectual disabilities call Anandalok home. They live, learn, create, and thrive on our 2.4-acre campus near Kolkata. Sixteen full-time staff members care for them every single day.
               </p>
               <p>
                 But our campus can hold many more. And the families who need us are not running out.

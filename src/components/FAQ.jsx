@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const faqs = [
   {
     q: "Is Anandalok a mental asylum?",
-    a: "No. Anandalok is a residential care sanctuary for individuals with autism, Down syndrome, ADHD, epilepsy, and other intellectual disabilities. These are neurological differences, not mental illnesses. Our residents are artists, musicians, gardeners, and craftspeople who live, learn, and create in a safe, loving environment."
+    a: "No. Anandalok is a residential care sanctuary for individuals with autism and intellectual disabilities. These are neurological differences, not mental illnesses. Our residents are artists, musicians, gardeners, and craftspeople who live, learn, and create in a safe, loving environment."
   },
   {
     q: "What is the difference between autism and mental illness?",

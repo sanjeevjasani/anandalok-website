@@ -86,7 +86,7 @@
 > No. Anandalok is a residential care sanctuary for individuals with autism and intellectual disabilities. Autism is a neurological difference, not a mental illness. Our residents are artists, musicians, gardeners, and craftspeople who live, learn, and create in a safe, loving environment.
 
 **After:**
-> No. Anandalok is a residential care sanctuary for individuals with autism, Down syndrome, ADHD, epilepsy, and other intellectual disabilities. These are neurological differences, not mental illnesses. Our residents are artists, musicians, gardeners, and craftspeople who live, learn, and create in a safe, loving environment.
+> No. Anandalok is a residential care sanctuary for individuals with autism and intellectual disabilities. These are neurological differences, not mental illnesses. Our residents are artists, musicians, gardeners, and craftspeople who live, learn, and create in a safe, loving environment.
 
 ---
 
@@ -98,7 +98,7 @@
 > Today, Anandalok is home to 35 residents — men and women on the autism spectrum and with intellectual disabilities — living on a lush 2.4-acre campus in Madhyamgram, North 24 Parganas.
 
 **After:**
-> Today, Anandalok is home to 35 residents — men and women living with autism, Down syndrome, ADHD, epilepsy, and other intellectual disabilities — on a lush 2.4-acre campus in Madhyamgram, North 24 Parganas.
+> Today, Anandalok is home to 35 residents — men and women living with intellectual disabilities — on a lush 2.4-acre campus in Madhyamgram, North 24 Parganas.
 
 ---
 
@@ -108,7 +108,7 @@
 > Caring for individuals with autism is not a 9-to-5 job. It is a calling.
 
 **After:**
-> Caring for individuals with autism, Down syndrome, ADHD, and epilepsy is not a 9-to-5 job. It is a calling.
+> Caring for individuals with intellectual disabilities is not a 9-to-5 job. It is a calling.
 
 ---
 
@@ -138,7 +138,7 @@
 > One of the biggest obstacles facing individuals with autism in India is not the condition itself. It is the way society misunderstands it.
 
 **After:**
-> One of the biggest obstacles facing individuals with autism, Down syndrome, ADHD, and epilepsy in India is not the condition itself. It is the way society misunderstands it.
+> One of the biggest obstacles facing individuals with autism, Down syndrome, ADHD, epilepsy and other intellectual disabilities in India is not the condition itself. It is the way society misunderstands it.
 
 ---
 
@@ -282,7 +282,7 @@
 > Right now, 35 individuals with autism call Anandalok home. They live, learn, create, and thrive on our 2.4-acre campus near Kolkata.
 
 **After:**
-> Right now, 35 individuals with autism, Down syndrome, ADHD, epilepsy, and other intellectual disabilities call Anandalok home. They live, learn, create, and thrive on our 2.4-acre campus near Kolkata.
+> Right now, 35 individuals with intellectual disabilities call Anandalok home. They live, learn, create, and thrive on our 2.4-acre campus near Kolkata.
 
 ---
 

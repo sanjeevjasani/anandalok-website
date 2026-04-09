@@ -134,7 +134,7 @@ export default function AboutPage() {
             <h2 className="font-heading font-bold text-4xl md:text-6xl text-dark leading-tight">36 Years Later, <br/> the Promise Still Holds</h2>
             <div className="space-y-6 text-dark/80 font-body text-lg leading-relaxed">
               <p>
-                Today, Anandalok is home to 35 residents — men and women living with autism, Down syndrome, ADHD, epilepsy, and other intellectual disabilities — on a lush 2.4-acre campus in Madhyamgram, North 24 Parganas.
+                Today, Anandalok is home to 35 residents — men and women living with intellectual disabilities — on a lush 2.4-acre campus in Madhyamgram, North 24 Parganas.
               </p>
               <p>
                 It is, to our knowledge, the oldest continuously running residential care sanctuary for individuals with autism in the Kolkata region.
@@ -217,7 +217,7 @@ export default function AboutPage() {
                 <h2 className="font-heading font-bold text-4xl md:text-5xl text-dark">A Family of Professionals Who Chose to Stay</h2>
                 <div className="space-y-6 text-dark/80 font-body text-lg leading-relaxed">
                   <p>
-                    Caring for individuals with autism, Down syndrome, ADHD, and epilepsy is not a 9-to-5 job. It is a calling. The people who work at Anandalok did not end up here by accident. They chose this work. Many have stayed for decades. They are not staff. They are family.
+                    Caring for individuals with intellectual disabilities is not a 9-to-5 job. It is a calling. The people who work at Anandalok did not end up here by accident. They chose this work. Many have stayed for decades. They are not staff. They are family.
                   </p>
                   <p className="font-bold text-dark italic">
                     Today, Anandalok is run by a dedicated team.
@@ -286,7 +286,7 @@ export default function AboutPage() {
                 <h2 className="font-heading font-bold text-4xl md:text-6xl text-dark leading-tight">These Conditions Are Not Mental Illness. <br/> Here Is What They Actually Are.</h2>
                 <div className="space-y-6 text-dark/80 font-body text-lg leading-relaxed">
                   <p>
-                    One of the biggest obstacles facing individuals with autism, Down syndrome, ADHD, and epilepsy in India is not the condition itself. It is the way society misunderstands it.
+                    One of the biggest obstacles facing individuals with autism, Down syndrome, ADHD, epilepsy and other intellectual disabilities in India is not the condition itself. It is the way society misunderstands it.
                   </p>
                   <p>
                     These are neurodevelopmental conditions — people are born with them. They are not caused by bad parenting or bad luck. They are not something to be cured. They are different ways of experiencing the world.
